@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+}
+.slider{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+}
+ .slider-item img{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+
+}
+.d-none{
+    display: none;
+}
+.active{
+    display: block;
+}
+.prev, .next {
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    font-size: 18px;
+    background: none;
+    font-size: 2rem;
+}
+i:hover{
+    /* background-color: blue; */
+    /* transform: translateY(-50%) scale(1.1); */
+    color: rgb(93, 7, 37);
+}
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.indicator {
+    position: absolute;
+    bottom: 10px;
+    bottom: 85%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+/*dot*/
+.dots {
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color:rgb(71, 49, 57);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dot.active {
+    background-color: #ffffff;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
